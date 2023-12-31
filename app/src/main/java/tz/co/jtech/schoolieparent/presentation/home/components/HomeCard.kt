@@ -42,7 +42,7 @@ fun HomeCard() {
 
             ) {
                 Text(
-                    text = "Joseph Mtinangi",
+                    text = "Student Name",
                     color = colorResource(id = R.color.text_primary),
                     style = MaterialTheme.typography.titleLarge
                 )

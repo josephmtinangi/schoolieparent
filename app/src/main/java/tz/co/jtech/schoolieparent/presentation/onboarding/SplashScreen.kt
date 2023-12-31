@@ -30,7 +30,7 @@ fun SplashScreen() {
     ) {
         Image(painter = painterResource(id = R.drawable.logo), contentDescription = null)
         Text(
-            text = "SCHOOLIE",
+            text = "SIMS",
             color = colorResource(id = R.color.text_primary),
             style = MaterialTheme.typography.titleLarge,
             fontSize = 30.sp

@@ -53,12 +53,12 @@ fun HomeScreen() {
             ),
             navigationIcon = {
                 IconButton(onClick = { /*TODO*/ }) {
-                    Icon(imageVector = Icons.Default.Menu, contentDescription = null)
+                    Icon(imageVector = Icons.Default.Menu, contentDescription = null, tint = Color.White)
                 }
             },
             actions = {
                 IconButton(onClick = { /*TODO*/ }) {
-                    Icon(imageVector = Icons.Default.Notifications, contentDescription = null)
+                    Icon(imageVector = Icons.Default.Notifications, contentDescription = null, tint = Color.White)
                 }
             },
             scrollBehavior = scrollBehavior
@@ -78,11 +78,11 @@ fun HomeScreen() {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            Text(text = "Updates")
+
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            Text(text = "Events")
+
         }
     }
 
