@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import tz.co.jtech.schoolieparent.presentation.auth.LoginScreen
 import tz.co.jtech.schoolieparent.presentation.common.AuthCard
+import tz.co.jtech.schoolieparent.presentation.home.HomeScreen
 import tz.co.jtech.schoolieparent.presentation.onboarding.SplashScreen
 import tz.co.jtech.schoolieparent.ui.theme.SchoolieParentTheme
 
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SplashScreen()
+                    HomeScreen()
                 }
             }
         }
