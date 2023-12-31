@@ -1,7 +1,10 @@
 package tz.co.jtech.schoolieparent.presentation.home
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
@@ -13,11 +16,14 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import tz.co.jtech.schoolieparent.R
+import tz.co.jtech.schoolieparent.presentation.home.components.HomeCard
 import tz.co.jtech.schoolieparent.ui.theme.Blue
 import tz.co.jtech.schoolieparent.ui.theme.SchoolieParentTheme
 
@@ -25,32 +31,50 @@ import tz.co.jtech.schoolieparent.ui.theme.SchoolieParentTheme
 @Composable
 fun HomeScreen() {
 
-    val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
+    Column(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
 
-    CenterAlignedTopAppBar(
-        title = {
-            Text(
-                text = stringResource(id = R.string.app_name),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-        },
-        colors = TopAppBarDefaults.mediumTopAppBarColors(
-            containerColor = Blue,
-            titleContentColor = Color.White
-        ),
-        navigationIcon = {
-            IconButton(onClick = { /*TODO*/ }) {
-                Icon(imageVector = Icons.Filled.Menu, contentDescription = null)
-            }
-        },
-        actions = {
-            IconButton(onClick = { /*TODO*/ }) {
-                Icon(imageVector = Icons.Filled.Notifications, contentDescription = null)
-            }
-        },
-        scrollBehavior = scrollBehavior
-    )
+        CenterAlignedTopAppBar(
+            title = {
+                Text(
+                    text = stringResource(id = R.string.app_name),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            },
+            colors = TopAppBarDefaults.mediumTopAppBarColors(
+                containerColor = Blue,
+                titleContentColor = Color.White
+            ),
+            navigationIcon = {
+                IconButton(onClick = { /*TODO*/ }) {
+                    Icon(imageVector = Icons.Default.Menu, contentDescription = null)
+                }
+            },
+            actions = {
+                IconButton(onClick = { /*TODO*/ }) {
+                    Icon(imageVector = Icons.Default.Notifications, contentDescription = null)
+                }
+            },
+            scrollBehavior = scrollBehavior
+        )
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(15.dp),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+
+            HomeCard()
+
+            Text(text = "Shortcuts")
+            Text(text = "Updates")
+            Text(text = "Events")
+        }
+    }
 
 }
 
