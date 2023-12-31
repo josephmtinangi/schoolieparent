@@ -12,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -68,7 +69,7 @@ fun LoginScreen() {
                     value = username.value,
                     onValueChange = {},
                     trailingIcon = {
-                        Icon(imageVector = Icons.Default.AccountCircle, contentDescription = null)
+                        Icon(imageVector = Icons.Default.Phone, contentDescription = null)
                     },
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Default)

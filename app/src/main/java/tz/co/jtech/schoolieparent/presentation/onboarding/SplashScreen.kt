@@ -6,6 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -31,6 +32,7 @@ fun SplashScreen() {
         Text(
             text = "SCHOOLIE",
             color = colorResource(id = R.color.text_primary),
+            style = MaterialTheme.typography.titleLarge,
             fontSize = 30.sp
         )
     }

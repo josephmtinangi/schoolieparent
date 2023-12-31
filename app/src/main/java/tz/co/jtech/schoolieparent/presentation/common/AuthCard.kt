@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,17 +36,21 @@ fun AuthCard(
             .height(180.dp)
             .clip(RoundedCornerShape(bottomEnd = 70.dp))
             .background(Blue),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.Start
     ) {
-        Text(
-            text = title,
-            color = colorResource(id = R.color.text_primary),
-            fontSize = 30.sp
-        )
-        Text(
-            text = body,
-            color = colorResource(id = R.color.text_primary)
-        )
+        Column(modifier = Modifier.padding(start = 20.dp)) {
+            Text(
+                text = title,
+                color = colorResource(id = R.color.text_primary),
+                fontSize = 30.sp,
+                style = MaterialTheme.typography.titleLarge
+            )
+            Text(
+                text = body,
+                color = colorResource(id = R.color.text_primary),
+                style = MaterialTheme.typography.bodyLarge
+            )
+        }
     }
 
 }
