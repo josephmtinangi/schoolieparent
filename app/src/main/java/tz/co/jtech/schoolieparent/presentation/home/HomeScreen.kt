@@ -3,7 +3,9 @@ package tz.co.jtech.schoolieparent.presentation.home
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -23,6 +25,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tz.co.jtech.schoolieparent.R
+import tz.co.jtech.schoolieparent.presentation.home.components.AcademicsCard
 import tz.co.jtech.schoolieparent.presentation.home.components.HomeCard
 import tz.co.jtech.schoolieparent.ui.theme.Blue
 import tz.co.jtech.schoolieparent.ui.theme.SchoolieParentTheme
@@ -64,14 +67,21 @@ fun HomeScreen() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(15.dp),
-            verticalArrangement = Arrangement.SpaceBetween
+                .padding(5.dp)
         ) {
 
             HomeCard()
 
-            Text(text = "Shortcuts")
+            Spacer(modifier = Modifier.height(24.dp))
+
+            AcademicsCard()
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Text(text = "Updates")
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Text(text = "Events")
         }
     }

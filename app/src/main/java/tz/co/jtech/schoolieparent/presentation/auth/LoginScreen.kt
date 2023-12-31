@@ -12,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -87,12 +88,12 @@ fun LoginScreen() {
                     trailingIcon = {
                         if (showPassword) {
                             IconButton(onClick = { showPassword = false }) {
-                                Icon(imageVector = Icons.Default.Check, contentDescription = null)
+                                Icon(imageVector = Icons.Default.Lock, contentDescription = null)
                             }
                         } else {
                             IconButton(onClick = { showPassword = true }) {
                                 Icon(
-                                    imageVector = Icons.Default.CheckCircle,
+                                    imageVector = Icons.Filled.Lock,
                                     contentDescription = null
                                 )
                             }
