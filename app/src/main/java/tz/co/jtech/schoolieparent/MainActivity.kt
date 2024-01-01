@@ -10,13 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import tz.co.jtech.schoolieparent.presentation.auth.CreatePasswordScreen
-import tz.co.jtech.schoolieparent.presentation.auth.LoginScreen
-import tz.co.jtech.schoolieparent.presentation.auth.OTPScreen
-import tz.co.jtech.schoolieparent.presentation.auth.RegisterScreen
-import tz.co.jtech.schoolieparent.presentation.common.AuthCard
-import tz.co.jtech.schoolieparent.presentation.home.HomeScreen
-import tz.co.jtech.schoolieparent.presentation.onboarding.SplashScreen
+import tz.co.jtech.schoolieparent.presentation.navgraph.Navigation
 import tz.co.jtech.schoolieparent.ui.theme.SchoolieParentTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreen()
+                    Navigation()
                 }
             }
         }
